@@ -24,7 +24,7 @@ std::string createPattern(const std::vector<std::string> &types) {
             pattern += "|";
         }
     }
-    pattern += ")\\s+\\w+\\s*\\([^)]*\\)\\s*\\{";
+    pattern += ")\\s+\\w+\\s*\\([^)]*\\)\\s*\\{?";
     pattern = "(?!" + pattern + ".*=).*" + pattern;
 
     return pattern;
